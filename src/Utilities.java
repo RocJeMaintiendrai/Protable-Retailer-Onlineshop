@@ -1,3 +1,5 @@
+import sun.tools.jconsole.Tab;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -547,8 +549,94 @@ public class Utilities extends HttpServlet{
 		return false;
 	}
 
+	//store manager function
+	public boolean removeProduct(String productId, String catalog) {
 
+		switch (catalog) {
+			case "Console":
+				SaxParserDataStore.consoles.remove(productId);
+				return true;
+			case "Game":
+				SaxParserDataStore.games.remove(productId);
+				return true;
+			case "Tablet":
+				SaxParserDataStore.tablets.remove(productId);
+				return true;
+			case "Smartspeaker":
+				SaxParserDataStore.smartspeakers.remove(productId);
+				return true;
+			case "Accessory":
+				SaxParserDataStore.accessories.remove(productId);
+				return true;
+		}
+		return true;
+	}
 
+	public boolean updateProduct(String id, String name, String price, String manufacturer, String condition, String discount, String image, String catalog) {
 
+		switch(catalog) {
+			case "Console" :
+				Console console = new Console();
+				console.setId(id);
+				console.setName(name);
+				console.setPrice(Double.parseDouble(price));
+				console.setRetailer(manufacturer);
+				console.setCondition(condition);
+				console.setDiscount(Double.parseDouble(discount));
+				console.setImage(image);
+				SaxParserDataStore.consoles.remove(id);
+				SaxParserDataStore.consoles.put(id, console);
+				return true;
+			case "Game" :
+				Game game = new Game();
+				game.setId(id);
+				game.setName(name);
+				game.setPrice(Double.parseDouble(price));
+				game.setRetailer(manufacturer);
+				game.setCondition(condition);
+				game.setDiscount(Double.parseDouble(discount));
+				game.setImage(image);
+				SaxParserDataStore.games.remove(id);
+				SaxParserDataStore.games.put(id, game);
+				return true;
+			case "Tablet" :
+				Tablet tablet = new Tablet();
+				tablet.setId(id);
+				tablet.setName(name);
+				tablet.setPrice(Double.parseDouble(price));
+				tablet.setRetailer(manufacturer);
+				tablet.setCondition(condition);
+				tablet.setDiscount(Double.parseDouble(discount));
+				tablet.setImage(image);
+				SaxParserDataStore.tablets.remove(id);
+				SaxParserDataStore.tablets.put(id, tablet);
+				return true;
+			case "Smartspeaker" :
+				Smartspeaker smartspeaker = new Smartspeaker();
+				smartspeaker.setId(id);
+				smartspeaker.setName(name);
+				smartspeaker.setPrice(Double.parseDouble(price));
+				smartspeaker.setRetailer(manufacturer);
+				smartspeaker.setCondition(condition);
+				smartspeaker.setDiscount(Double.parseDouble(discount));
+				smartspeaker.setImage(image);
+				SaxParserDataStore.smartspeakers.remove(id);
+				SaxParserDataStore.smartspeakers.put(id, smartspeaker);
+				return true;
+			case "Accessory" :
+				Accessory accessory = new Accessory();
+				accessory.setId(id);
+				accessory.setName(name);
+				accessory.setPrice(Double.parseDouble(price));
+				accessory.setRetailer(manufacturer);
+				accessory.setCondition(condition);
+				accessory.setDiscount(Double.parseDouble(discount));
+				accessory.setImage(image);
+				SaxParserDataStore.accessories.remove(id);
+				SaxParserDataStore.accessories.put(id, accessory);
+				return true;
+		}
+		return false;
+	}
 
 }

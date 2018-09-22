@@ -28,7 +28,7 @@ public class UpdateProduct extends HttpServlet{
 
         if (utility.updateProduct(productId, name, price, manufacturer, condition, discount, image, catalog)) {
             pw.print("alert(\"Update successfully!\")");
-            response.sendRedirect("StoreManager");
+            response.sendRedirect("StoreManagerHome");
         }
     }
 }

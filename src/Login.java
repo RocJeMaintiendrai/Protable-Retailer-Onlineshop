@@ -53,7 +53,7 @@ public class Login extends HttpServlet {
 					response.sendRedirect("Home");
 					return;
 				} else if (userType.equalsIgnoreCase("StoreManager")) {
-					response.sendRedirect("StoreManager");
+					response.sendRedirect("StoreManagerHome");
 					return;
 
 				} else if (userType.equals("Salesman")) {
