@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ProductCatalog>
+
+    <ConsoleCatalog>
+
+        <console id="Suunto">
+            <name>Suunto</name>
+            <price>46</price>
+            <image>suunto.jpg</image>
+            <manufacturer>Fitness</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+            <accessories>
+                <accessory>bag</accessory>
+                <accessory>laptopCover</accessory>
+            </accessories>
+        </console>
+
+
+        <console id="Xiaomi">
+            <name>Xiaomi</name>
+            <price>46</price>
+            <image>miband.jpg</image>
+            <manufacturer>Fitness</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+            <accessories>
+                <accessory>mouse</accessory>
+                <accessory>keyboard</accessory>
+            </accessories>
+        </console>
+
+        <console id="AppleWatch3">
+            <name>Apple Watch3</name>
+            <price>359</price>
+            <image>applewatch.jpg</image>
+            <manufacturer>Smart</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+        <console id="HuaweiWatch">
+            <name>Huawei Watch</name>
+            <price>399</price>
+            <image>huawei.jpg</image>
+            <manufacturer>Smart</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+        <console id="SamsungWatch">
+            <name>SamSung Watch</name>
+            <price>349</price>
+            <image>sumsung.jpg</image>
+            <manufacturer>Smart</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+        <console id="BeatsHeadphone">
+            <name>Beats Headphone</name>
+            <price>249</price>
+            <image>beats.jpg</image>
+            <manufacturer>Headphone</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+        <console id="SonyHeadphone">
+            <name>Sony Headphone</name>
+            <price>199</price>
+            <image>sony.jpg</image>
+            <manufacturer>Headphone</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+
+        <console id="Oculus">
+            <name>Oculus</name>
+            <price>599</price>
+            <image>oculus.jpg</image>
+            <manufacturer>Virtualreality</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+        <console id="SamsungGear">
+            <name>SamsungGear</name>
+            <price>129</price>
+            <image>sanxingvr.jpg</image>
+            <manufacturer>Virtualreality</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </console>
+
+
+        <console id="pettracker">
+            <name>Pet Tracker</name>
+            <price>99</price>
+            <image>pettracker.jpg</image>
+            <manufacturer>Pettracker</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+
+        </console>
+
+    </ConsoleCatalog>
+
+    <TabletCatalog>
+
+        <tablet id="MacBook">
+            <name>MacBook</name>
+            <price>1199</price>
+            <image>macbook.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </tablet>
+        <tablet id="MacBookPro">
+            <name>MacBookPro</name>
+            <price>1999</price>
+            <image>macbookpro.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>Used</condition>
+            <discount>20</discount>
+        </tablet>
+        <tablet id="MacBookAir">
+            <name>MacBookAir</name>
+            <price>799</price>
+            <image>macbookair.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </tablet>
+
+        <tablet id="Surface3">
+            <name>Surface3</name>
+            <price>399</price>
+            <image>surface3.jpg</image>
+            <manufacturer>Microsoft</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </tablet>
+        <tablet id="Surface4">
+            <name>Surface4</name>
+            <price>599</price>
+            <image>surface4.jpg</image>
+            <manufacturer>Microsoft</manufacturer>
+            <condition>New</condition>
+            <discount>15</discount>
+        </tablet>
+        <tablet id="SurfacePro">
+            <name>Surface Pro</name>
+            <price>799</price>
+            <image>surfacepro.jpg</image>
+            <manufacturer>Microsoft</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </tablet>
+        <tablet id="SurfaceBook">
+            <name>SurfaceBook</name>
+            <price>1099</price>
+            <image>surfacebook.jpg</image>
+            <manufacturer>Microsoft</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </tablet>
+
+        <tablet id="SamsungGalaxy">
+            <name>SamsungGalaxy</name>
+            <price>1249</price>
+            <image>samsunggalaxy.jpg</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>15</discount>
+        </tablet>
+        <tablet id="SamsungOdyssey">
+            <name>Samsung Odyssey</name>
+            <price>1399</price>
+            <image>odyssey.jpg</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>15</discount>
+        </tablet>
+        <tablet id="SamsungNotebook">
+            <name>Samsung Notebook</name>
+            <price>1199</price>
+            <image>samsungnotebook.jpg</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </tablet>
+
+    </TabletCatalog>
+
+    <GamesCatalog>
+
+        <game id="iPhone7">
+            <name>iPhone7</name>
+            <price>449</price>
+            <image>iphone7.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+        <game id="iPhone8">
+            <name>iPhone8</name>
+            <price>599</price>
+            <image>iphone8.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+        <game id="iPhoneXR">
+            <name>iPhoneXR</name>
+            <price>749</price>
+            <image>iphonexr.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+        <game id="iPhoneXs">
+            <name>iPhoneXs</name>
+            <price>999</price>
+            <image>iphonexs.jpg</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+
+        <game id="HuaweiP20">
+            <name>HuaweiP20</name>
+            <price>50</price>
+            <image>huaweip20.jpg</image>
+            <manufacturer>Huawei</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+        <game id="HuaweiP20Pro">
+            <name>HuaweiP20Pro</name>
+            <price>999</price>
+            <image>huaweip20pro.jpg</image>
+            <manufacturer>Huawei</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+        <game id="HuaweiNova3">
+            <name>HuaweiNova3</name>
+            <price>499</price>
+            <image>huaweinova3.jpg</image>
+            <manufacturer>Huawei</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+
+        <game id="Xiaomi8">
+            <name>Xiaomi8</name>
+            <price>465</price>
+            <image>mi8.jpg</image>
+            <manufacturer>Xiaomi</manufacturer>
+            <condition>New</condition>
+            <discount>15</discount>
+        </game>
+        <game id="XiaomiNote5">
+            <name>XiaomiNote5</name>
+            <price>279.99</price>
+            <image>xiaominote5.jpg</image>
+            <manufacturer>Xiaomi</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+        <game id="XiaomiRedmi5">
+            <name>XiaomiRedmi5</name>
+            <price>484</price>
+            <image>redmi5.jpg</image>
+            <manufacturer>Xiaomi</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </game>
+    </GamesCatalog>
+
+    <SmartspeakerCatalog>
+
+        <smartspeaker id="GoogleMini">
+            <name>Google Mini</name>
+            <price>49</price>
+            <image>googlemini.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="GoogleHome">
+            <name>Google Home</name>
+            <price>84</price>
+            <image>googlehome.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="AmazonEcho">
+            <name>AmazonEcho</name>
+            <price>99</price>
+            <image>amazonecho.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="XiaomiSpeaker">
+            <name>Xiaomi</name>
+            <price>99</price>
+            <image>xiaomi.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="AppleHomepod">
+            <name>Apple Homepod</name>
+            <price>349</price>
+            <image>applehomepod.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="Jbl">
+            <name>JBL</name>
+            <price>299</price>
+            <image>jbl.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>15</discount>
+        </smartspeaker>
+        <smartspeaker id="Samsung">
+            <name>Samsung Speaker</name>
+            <price>89</price>
+            <image>samsung.jpg</image>
+            <manufacturer>Smartspeaker</manufacturer>
+            <condition>New</condition>
+            <discount>15</discount>
+        </smartspeaker>
+        <smartspeaker id="HuaweiSpeaker">
+            <name>Huawei Speaker</name>
+            <price>129</price>
+            <image>huawei.jpg</image>
+            <manufacturer>Voiceassistant</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="Bose">
+            <name>Bose Speaker</name>
+            <price>379</price>
+            <image>bose.jpg</image>
+            <manufacturer>Voiceassistant</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+        <smartspeaker id="Microsoft">
+            <name>Microsoft Speaker</name>
+            <price>238</price>
+            <image>microsoft.jpg</image>
+            <manufacturer>Voiceassistant</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </smartspeaker>
+
+    </SmartspeakerCatalog>
+
+    <AccessoryCatalog>
+        <accessory id="PhoneCover">
+            <name>Phone Cover</name>
+            <price>12</price>
+            <image>cover.jpg</image>
+            <manufacturer>Phone</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+        <accessory id="PhoneShield">
+            <name>Phone Shield</name>
+            <price>11</price>
+            <image>shield.jpg</image>
+            <manufacturer>Phone</manufacturer>
+            <condition>New</condition>
+            <discount>100</discount>
+        </accessory>
+
+        <accessory id="PhoneCable">
+            <name>Phone Cable</name>
+            <price>5</price>
+            <image>cable.jpg</image>
+            <manufacturer>Phone</manufacturer>
+            <condition>New</condition>
+            <discount>40</discount>
+        </accessory>
+
+        <accessory id="PhoneCharger">
+            <name>Phone Charger</name>
+            <price>9</price>
+            <image>charger.jpg</image>
+            <manufacturer>Phone</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+        <accessory id="SelfieStick">
+            <name>Selfie Stick</name>
+            <price>24</price>
+            <image>stick.jpg</image>
+            <manufacturer>Phone</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+        <accessory id="Camera">
+            <name>PhoneCamera</name>
+            <price>99</price>
+            <image>camera.jpg</image>
+            <manufacturer>Phone</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+        <accessory id="bag">
+            <name>LaptopBag</name>
+            <price>39</price>
+            <image>bag.jpg</image>
+            <manufacturer>Fitness</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+
+        <accessory id="laptopCover">
+            <name>LaptopCover</name>
+            <price>43</price>
+            <image>lapcover.jpg</image>
+            <manufacturer>Fitness</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+        <accessory id="mouse">
+            <name>Mouse</name>
+            <price>39</price>
+            <image>mouse.jpg</image>
+            <manufacturer>Fitness</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+        <accessory id="keyboard">
+            <name>Keyboard</name>
+            <price>89</price>
+            <image>key.jpg</image>
+            <manufacturer>Fitness</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </accessory>
+
+    </AccessoryCatalog>
+
+
+
+
+
+</ProductCatalog>
