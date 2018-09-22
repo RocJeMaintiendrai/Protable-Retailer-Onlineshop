@@ -82,7 +82,7 @@ public class StoreManager extends HttpServlet{
     }
 
     private void displayStoreManager(HttpServletRequest request,
-                                         HttpServletResponse response, PrintWriter pw, String flag) {
+                                     HttpServletResponse response, PrintWriter pw, String flag) {
 
         Utilities utility = new Utilities(request, pw);
         utility.printHtml("Header.html");
