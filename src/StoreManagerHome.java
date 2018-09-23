@@ -34,7 +34,7 @@ public class StoreManagerHome extends HttpServlet{
         Utilities utility = new Utilities(request, pw);
 
         //Add New product
-        Map<String, Object> map = new HashMap<>(); //保存表单提交的数据(新建product)
+        Map<String, Object> map = new HashMap<>();
 
         DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
         ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
@@ -44,12 +44,12 @@ public class StoreManagerHome extends HttpServlet{
             for (FileItem fileItem : parseRequest) {
                 boolean formField = fileItem.isFormField();
                 if (formField) {
-                    //普通表单项
+
                     String fieldName = fileItem.getFieldName();
                     String fieldValue = fileItem.getString();
                     map.put(fieldName, fieldValue);
                 } else {
-                    //图片上传项，获得文件名称和内容
+
 
                     catalog = String.valueOf(map.get("productCatalog"));
                     String realPath = utility.getRealPath(catalog);
@@ -68,7 +68,7 @@ public class StoreManagerHome extends HttpServlet{
             }
 
             if (utility.storeNewProduct(map)) {
-                //添加成功
+           
                 error_msg = "Completed!";
                 displayStoreManagerHome(request, response, pw, "newProduct");
             } else {
