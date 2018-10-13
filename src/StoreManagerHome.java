@@ -68,7 +68,7 @@ public class StoreManagerHome extends HttpServlet{
             }
 
             if (utility.storeNewProduct(map)) {
-           
+
                 error_msg = "Completed!";
                 displayStoreManagerHome(request, response, pw, "newProduct");
             } else {

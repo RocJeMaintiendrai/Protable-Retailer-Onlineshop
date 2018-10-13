@@ -183,7 +183,7 @@ public class SalesmanHome extends HttpServlet{
             FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "\\webapps\\Tutorial_1\\PaymentDetails.txt"));
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             orderPayments = (HashMap) objectInputStream.readObject();
-            } catch (Exception ignored) {
+        } catch (Exception ignored) {
 
         }
 
@@ -207,11 +207,11 @@ public class SalesmanHome extends HttpServlet{
                 pw.print("<form method='post' action='RemoveUpdateOrder'>");
                 pw.print("<tr>");
                 pw.print("<td>" + od.getOrderId() + "</td>" +
-                         "<td>" + od.getUserName() + "</td>" +
-                         "<td>" + od.getOrderName() + "</td>" +
-                         "<td>" + od.getOrderPrice() + "</td>" +
-                         "<td>" + od.getUserAddress() + "</td>" +
-                         "<td>" + od.getCreditCardNo() + "</td>");
+                                         "<td>" + od.getUserName() + "</td>" +
+                                         "<td>" + od.getOrderName() + "</td>" +
+                                         "<td>" + od.getOrderPrice() + "</td>" +
+                                         "<td>" + od.getUserAddress() + "</td>" +
+                                         "<td>" + od.getCreditCardNo() + "</td>");
                 pw.print("<input type='hidden' name='orderName' value='" + od.getOrderName() + "'>");
                 pw.print("<input type='hidden' name='orderId' value='" + od.getOrderId() + "'>");
                 pw.print("<input type='hidden' name='username' value='" + od.getUserName() + "'>");
