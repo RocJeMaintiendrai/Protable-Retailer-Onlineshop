@@ -25,7 +25,7 @@ public class UpdateOrder extends HttpServlet{
         String address = request.getParameter("address");
         String creditCard = request.getParameter("creditCard");
 
-        utility.removeOldOrder(orderId, productName, customerName);
+        utility.removeOldOrder(orderId);
 
         //Create a new order id
         SimpleDateFormat df = new SimpleDateFormat("HHmmss");//设置日期格式

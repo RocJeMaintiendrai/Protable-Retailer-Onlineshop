@@ -67,10 +67,12 @@ public class SmartspeakerList extends HttpServlet {
 		pw.print("<div id='content'><div class='post'><h2 class='title meta'>");
 		pw.print("<a style='font-size: 24px;'>"+name+"</a>");
 		pw.print("</h2><div class='entry'><table id='bestseller'>");
-		int i = 1; int size= hm.size();
+		int i = 1;
+		int size= hm.size();
 		for(Map.Entry<String, Smartspeaker> entry : hm.entrySet()){
 			Smartspeaker smartspeaker = entry.getValue();
-			if(i%3==1) pw.print("<tr>");
+			if(i%3==1)
+				pw.print("<tr>");
 			pw.print("<td><div id='shop_item'>");
 			pw.print("<h3>"+smartspeaker.getName()+"</h3>");
 			pw.print("<strong>"+ "$" + smartspeaker.getPrice() + "</strong><ul>");
@@ -83,12 +85,13 @@ public class SmartspeakerList extends HttpServlet {
 							         "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
 			pw.print("<li><form method='post' action='WriteReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 							         "<input type='hidden' name='type' value='smartspeakers'>"+
-							         "<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+							         "<input type='hidden' name='maker' value='"+smartspeaker.getRetailer()+"'>"+
 							         "<input type='hidden' name='access' value=''>"+
+							         "<input type='hidden' name='price' value='"+smartspeaker.getPrice()+"'>" +
 							         "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
 			pw.print("<li><form method='post' action='ViewReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 							         "<input type='hidden' name='type' value='smartspeakers'>"+
-							         "<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+							         "<input type='hidden' name='maker' value='"+smartspeaker.getRetailer()+"'>"+
 							         "<input type='hidden' name='access' value=''>"+
 							         "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
 			pw.print("</ul></div></td>");

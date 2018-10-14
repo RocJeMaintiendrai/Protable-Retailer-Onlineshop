@@ -21,7 +21,7 @@ public class AjaxUtility {
 
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/CSP584?useUnicode=true&characterEncoding=utf8", "root", "admin123456");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/CSP584?useUnicode=true&characterEncoding=utf8", "root", "admin123");
             message = "Successful";
             return message;
         } catch (SQLException e) {

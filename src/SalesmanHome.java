@@ -22,7 +22,6 @@ public class SalesmanHome extends HttpServlet{
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
         Utilities utility = new Utilities(request, pw);
@@ -40,13 +39,10 @@ public class SalesmanHome extends HttpServlet{
         String customerAddress = request.getParameter("customerAddress");
 
         HashMap<String, User> hm = new HashMap<String, User>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
 
         //get user details from file
         try{
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "\\webapps\\Tutorial_1\\UserDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            hm = (HashMap) objectInputStream.readObject();
+            hm = MySqlDataStoreUtilities.selectUser();
         } catch (Exception e) {
 
         }
@@ -62,14 +58,7 @@ public class SalesmanHome extends HttpServlet{
                     error_msg = "Username already exist."; //已完成测试
                     displaySalesmanHome(request, response, pw, "customer");
                 } else {
-                    User user = new User(username, password, "Customer");
-                    hm.put(username, user);
-                    FileOutputStream fileOutputStream = new FileOutputStream(TOMCAT_HOME + "\\webapps\\Tutorial_1\\UserDetails.txt");
-                    ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                    objectOutputStream.writeObject(hm);
-                    objectOutputStream.flush();
-                    objectOutputStream.close();
-                    fileOutputStream.close();
+                    MySqlDataStoreUtilities.insertUser(username, password,repassword,"customer");
                     HttpSession session = request.getSession(true);
                     session.setAttribute("login_msg", "The customer account created successfully.");
 
@@ -122,6 +111,7 @@ public class SalesmanHome extends HttpServlet{
         pw.print("Create New Customer");
         pw.print("</h3>");
         pw.print("<div class='entry'>");
+
         if (flag.equals("customer"))
             pw.print("<h4 style='color:red'>" + error_msg + "</h4>");
 
@@ -145,10 +135,8 @@ public class SalesmanHome extends HttpServlet{
         pw.print("Create New Order");
         pw.print("</h3>");
         pw.print("<div class='entry'>");
-
         if (flag.equals("order"))
             pw.print("<h4 style='color:red'>" + error_msg + "</h4>");
-
         pw.print("<form action='SalesmanHome' method='post'>");
         pw.print("<table style='width:100%'><tr><td>");
         pw.print("<h4>Customer name</h4></td><td><input type='text' name='customerName' value='' class='input' required></input>");
@@ -178,11 +166,9 @@ public class SalesmanHome extends HttpServlet{
 
         //show order details
         HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
+
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "\\webapps\\Tutorial_1\\PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
+            orderPayments = MySqlDataStoreUtilities.selectOrder();
         } catch (Exception ignored) {
 
         }

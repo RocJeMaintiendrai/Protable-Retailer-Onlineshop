@@ -6,6 +6,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Random;
 
 @WebServlet("/Payment")
@@ -16,12 +21,11 @@ public class Payment extends HttpServlet {
 
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
+		String msg = "good";
+		HttpSession session = request.getSession(true);
+		Utilities utility = new Utilities(request,pw);
 
-
-		Utilities utility = new Utilities(request, pw);
-		if(!utility.isLoggedin())
-		{
-			HttpSession session = request.getSession(true);
+		if(!utility.isLoggedin()) {
 			session.setAttribute("login_msg", "Please Login to Pay");
 			response.sendRedirect("Login");
 			return;
@@ -30,13 +34,11 @@ public class Payment extends HttpServlet {
 
 		String userAddress=request.getParameter("userAddress");
 		String creditCardNo=request.getParameter("creditCardNo");
-		System.out.print("the user address is" +userAddress);
-		System.out.print(creditCardNo);
-		if(!userAddress.isEmpty() && !creditCardNo.isEmpty() )
-		{
-			//Random rand = new Random();
-			//int orderId = rand.nextInt(100);
-			int orderId=utility.getOrderPaymentSize()+1;
+
+		if(!userAddress.isEmpty() && !creditCardNo.isEmpty()) {
+
+			SimpleDateFormat df = new SimpleDateFormat("HHmmss");//设置日期格式
+			int orderId = Integer.parseInt(df.format(new Date()));  //设置订单号为当前下单时间的时分秒
 
 			//iterate through each order
 
@@ -61,17 +63,29 @@ public class Payment extends HttpServlet {
 			pw.print("&nbsp&nbsp");
 			pw.print("is stored ");
 			pw.print("<br>Your Order No is "+(orderId));
+
+			//获取delivery date
+			SimpleDateFormat deliveryDateFormat = new SimpleDateFormat("MM-dd");//设置日期格式
+			String today = deliveryDateFormat.format(new Date());
+			Calendar c = Calendar.getInstance();
+			try {
+				c.setTime(deliveryDateFormat.parse(today));
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			c.add(Calendar.DATE, 14);  // number of days to add
+			today = deliveryDateFormat.format(c.getTime());
+			pw.print("<br>Estimated delivery date: " + today);
 			pw.print("</h2></div></div></div>");
 			utility.printHtml("Footer.html");
-		}else
-		{
+		} else {
 			utility.printHtml("Header.html");
 			utility.printHtml("LeftNavigationBar.html");
 			pw.print("<div id='content'><div class='post'><h2 class='title meta'>");
 			pw.print("<a style='font-size: 24px;'>Order</a>");
 			pw.print("</h2><div class='entry'>");
 
-			pw.print("<h4 style='color:red'>Please enter valid address and creditcard number</h4>");
+			pw.print("<h4 style='color:red'>Please enter valid address and credit card number</h4>");
 			pw.print("</h2></div></div></div>");
 			utility.printHtml("Footer.html");
 		}

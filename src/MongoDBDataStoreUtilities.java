@@ -1,6 +1,7 @@
 import apple.laf.JRSUIConstants;
 import com.mongodb.*;
 import com.mongodb.client.MongoDatabase;
+
 import java.util.*;
 
 public class MongoDBDataStoreUtilities {
@@ -26,10 +27,10 @@ public class MongoDBDataStoreUtilities {
         }
     }
 
-
     public static String insertReview(String productname, String username, String producttype, String productmaker,
                                       String reviewrating, String reviewdate, String reviewtext, String retailerpin,
-                                      String price, String retailercity, String userAge, String userGender, String userOccupation) {
+                                      String price, String retailercity, String userAge, String userGender,
+                                      String userOccupation) {
         try {
             getConnection();
             BasicDBObject doc = new BasicDBObject("title", "myReviews").
@@ -70,9 +71,13 @@ public class MongoDBDataStoreUtilities {
                     reviews.put(obj.getString("productName"), arr);
                 }
                 ArrayList<Review> listReview = reviews.get(obj.getString("productName"));
-                Review review = new Review(obj.getString("productName"), obj.getString("userName"), obj.getString("productType"),
-                                           obj.getString("productMaker"), obj.getString("reviewRating"), obj.getString("reviewDate"), obj.getString("reviewText"),
-                                           obj.getString("retailerpin"), obj.getString("price"), obj.getString("retailercity"), obj.getString("userAge"), obj.getString("userGender"), obj.getString("userOccupation"));
+                Review review = new Review(obj.getString("productName"), obj.getString("userName"),
+                                           obj.getString("productType"), obj.getString("productMaker"),
+                                           obj.getString("reviewRating"), obj.getString("reviewDate"),
+                                           obj.getString("reviewText"), obj.getString("retailerpin"),
+                                           obj.getString("price"), obj.getString("retailercity"),
+                                           obj.getString("userAge"), obj.getString("userGender"),
+                                           obj.getString("userOccupation"));
                 //add to review hashmap
                 listReview.add(review);
 
@@ -83,7 +88,6 @@ public class MongoDBDataStoreUtilities {
             return reviews;
         }
     }
-
 
     public static ArrayList<Bestrating> topProducts() {
         ArrayList<Bestrating> Bestrate = new ArrayList<Bestrating>();
@@ -124,7 +128,6 @@ public class MongoDBDataStoreUtilities {
             DBObject sortFields = new BasicDBObject("count", -1);
             DBObject sort = new BasicDBObject("$sort", sortFields);
             AggregationOutput output = myReviews.aggregate(group, sort, limit);
-
 
             for (DBObject res : output.results()) {
                 System.out.println(res);
@@ -193,7 +196,6 @@ public class MongoDBDataStoreUtilities {
 
             DBObject orderby = new BasicDBObject();
             orderby = new BasicDBObject("$sort", sort);
-
 
             AggregationOutput aggregate = myReviews.aggregate(group, project, orderby);
 

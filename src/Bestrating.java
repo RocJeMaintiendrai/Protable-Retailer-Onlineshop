@@ -1,15 +1,14 @@
 import java.io.*;
-public class Bestrating
-{
+public class Bestrating {
     String productname ;
     String rating;
 
 
-    public  Bestrating(String productname,String rating)
-    {
+    public  Bestrating(String productname,String rating) {
 
         this.productname = productname ;
         this.rating = rating;
+
     }
 
 
@@ -20,4 +19,5 @@ public class Bestrating
     public String getRating () {
         return rating;
     }
+
 }

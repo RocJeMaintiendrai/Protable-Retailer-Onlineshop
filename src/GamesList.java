@@ -78,7 +78,8 @@ public class GamesList extends HttpServlet {
 		pw.print("<div id='content'><div class='post'><h2 class='title meta'>");
 		pw.print("<a style='font-size: 24px;'>"+name+"</a>");
 		pw.print("</h2><div class='entry'><table id='bestseller'>");
-		int i = 1; int size= hm.size();
+		int i = 1;
+		int size= hm.size();
 		for(Map.Entry<String, Game> entry : hm.entrySet()){
 			Game game = entry.getValue();
 			if(i%3==1) pw.print("<tr>");
@@ -94,12 +95,13 @@ public class GamesList extends HttpServlet {
 							         "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
 			pw.print("<li><form method='post' action='WriteReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 							         "<input type='hidden' name='type' value='games'>"+
-							         "<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+							         "<input type='hidden' name='maker' value='"+game.getRetailer()+"'>"+
 							         "<input type='hidden' name='access' value=''>"+
+									 "<input type='hidden' name='price' value='"+ game.getPrice() +"'>" +
 							         "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
 			pw.print("<li><form method='post' action='ViewReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 							         "<input type='hidden' name='type' value='games'>"+
-							         "<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+							         "<input type='hidden' name='maker' value='"+game.getRetailer()+"'>"+
 							         "<input type='hidden' name='access' value=''>"+
 							         "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
 			pw.print("</ul></div></td>");

@@ -78,9 +78,7 @@ public class CheckOut extends HttpServlet {
 			pw.print("</td></tr></table></form>");
 			pw.print("</div></div></div>");
 			utility.printHtml("Footer.html");
-		}
-		catch(Exception e)
-		{
+		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
 	}

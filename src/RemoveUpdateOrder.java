@@ -30,7 +30,7 @@ public class RemoveUpdateOrder extends HttpServlet {
 
         if (request.getParameter("Order") != null && request.getParameter("Order").equals("Cancel")) {
             //Cancel Order
-            utility.removeOldOrder(orderId, productName, username);
+            utility.removeOldOrder(orderId);
 
             if (userType.equals("customer")) {
                 response.sendRedirect("Account");

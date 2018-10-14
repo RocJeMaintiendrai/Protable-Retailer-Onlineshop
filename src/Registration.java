@@ -37,25 +37,14 @@ public class Registration extends HttpServlet {
 
 		//if password and repassword does not match show error message
 
-		if(!password.equals(repassword))
-		{
+		if(!password.equals(repassword)) {
 			error_msg = "Passwords doesn't match!";
-		}
-		else
-		{
+		} else {
 			HashMap<String, User> hm=new HashMap<String, User>();
-			String TOMCAT_HOME = System.getProperty("catalina.home");
 
-			//get the user details from file 
-
-			try
-			{
-				FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME+"\\webapps\\Tutorial_1\\UserDetails.txt"));
-				ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-				hm= (HashMap)objectInputStream.readObject();
-			}
-			catch(Exception e)
-			{
+			try {
+				hm = MySqlDataStoreUtilities.selectUser();
+			} catch(Exception e) {
 
 			}
 
@@ -63,25 +52,21 @@ public class Registration extends HttpServlet {
 
 			if(hm.containsKey(username))
 				error_msg = "Username already exist as " + usertype;
-			else
-			{
+			else {
 				/*create a user object and store details into hashmap
 				store the user hashmap into file  */
 
 				User user = new User(username,password,usertype);
-				hm.put(username, user);
-				FileOutputStream fileOutputStream = new FileOutputStream(TOMCAT_HOME+"\\webapps\\Tutorial_1\\UserDetails.txt");
-				ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-				objectOutputStream.writeObject(hm);
-				objectOutputStream.flush();
-				objectOutputStream.close();
-				fileOutputStream.close();
-				HttpSession session = request.getSession(true);
-				session.setAttribute("login_msg", "Your "+usertype+" account has been created. Please login");
-				if(!utility.isLoggedin()){
-					response.sendRedirect("Login"); return;
-				} else {
-					response.sendRedirect("Account"); return;
+				if(MySqlDataStoreUtilities.insertUser(username, password, repassword, usertype)) {
+					HttpSession session = request.getSession(true);
+					session.setAttribute("login_msg", "Your " + usertype + " account has been created. Please login");
+					if(!utility.isLoggedin()) {
+						response.sendRedirect("Login");
+						return;
+					} else {
+						response.sendRedirect("Account");
+						return;
+					}
 				}
 			}
 		}
@@ -90,7 +75,8 @@ public class Registration extends HttpServlet {
 		if(utility.isLoggedin()){
 			HttpSession session = request.getSession(true);
 			session.setAttribute("login_msg", error_msg);
-			response.sendRedirect("Account"); return;
+			response.sendRedirect("Account");
+			return;
 		}
 		displayRegistration(request, response, pw, true);
 
@@ -99,8 +85,7 @@ public class Registration extends HttpServlet {
 	/*  displayRegistration function displays the Registration page of New User */
 
 	protected void displayRegistration(HttpServletRequest request,
-	                                   HttpServletResponse response, PrintWriter pw, boolean error)
-					throws ServletException, IOException {
+	                                   HttpServletResponse response, PrintWriter pw, boolean error) {
 		Utilities utility = new Utilities(request, pw);
 		utility.printHtml("Header.html");
 		pw.print("<div class='post' style='float: none; width: 100%'>");

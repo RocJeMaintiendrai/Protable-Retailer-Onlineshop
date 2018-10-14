@@ -1,3 +1,5 @@
+import sun.tools.jconsole.Tab;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -96,12 +98,13 @@ public class TabletList extends HttpServlet {
 							         "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
 			pw.print("<li><form method='post' action='WriteReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 							         "<input type='hidden' name='type' value='tablets'>"+
-							         "<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+							         "<input type='hidden' name='maker' value='"+ Tablet.getRetailer()+"'>"+
 							         "<input type='hidden' name='access' value=''>"+
+							         "<input type='hidden' name='price' value='"+Tablet.getPrice()+"'>" +
 							         "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
 			pw.print("<li><form method='post' action='ViewReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 							         "<input type='hidden' name='type' value='tablets'>"+
-							         "<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+							         "<input type='hidden' name='maker' value='"+Tablet.getRetailer()+"'>"+
 							         "<input type='hidden' name='access' value=''>"+
 							         "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
 			pw.print("</ul></div></td>");
