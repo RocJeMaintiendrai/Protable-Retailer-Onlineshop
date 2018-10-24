@@ -120,5 +120,124 @@ public class MySqlDataStoreUtilities {
         return hm;
     }
 
+    public static HashMap<String, Product> selectInventory() {
+        HashMap<String, Product> hm = new HashMap<String, Product>();
+        try {
+            getConnection();
+
+            String selectAcc = "select * from Productdetails";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Product product = new Product(rs.getString("productName"), rs.getDouble("productPrice"), Integer.parseInt(rs.getString("inventory")));
+                hm.put(rs.getString("Id"), product);
+                product.setId(rs.getString("Id"));
+            }
+        } catch (Exception e) {
+        }
+        return hm;
+    }
+
+    public static HashMap<String, Product> selectOnSale() {
+        HashMap<String, Product> hm = new HashMap<String, Product>();
+        try {
+            getConnection();
+
+            String selectAcc = "select * from Productdetails where productCondition = ?";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            pst.setString(1, "1");
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Product product = new Product(rs.getString("productName"), rs.getDouble("productPrice"), Integer.parseInt(rs.getString("inventory")));
+                hm.put(rs.getString("Id"), product);
+                product.setId(rs.getString("Id"));
+            }
+        } catch (Exception e) {
+        }
+        return hm;
+    }
+
+    public static HashMap<String, Product> selectRebate() {
+        HashMap<String, Product> hm = new HashMap<String, Product>();
+        try {
+            getConnection();
+
+            String selectAcc = "select * from Productdetails where productDiscount > 0";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Product product = new Product(rs.getString("productName"), rs.getDouble("productPrice"), Double.parseDouble(rs.getString("productDiscount")));
+                hm.put(rs.getString("Id"), product);
+                product.setId(rs.getString("Id"));
+            }
+        } catch (Exception e) {
+        }
+        return hm;
+    }
+
+    public static HashMap<String, OrderPayment> selectSaleAmount() {
+        HashMap<String, OrderPayment> hm = new HashMap<String, OrderPayment>();
+        try {
+            getConnection();
+
+            String selectAcc = "select DISTINCT(temp.orderName),temp.saleAmount,orders.orderPrice from orders, (select orderName, count(orderName) as saleAmount from orders group by orderName) as temp where orders.orderName = temp.orderName";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            int i = 0;
+            while (rs.next()) {
+                OrderPayment orderPayment = new OrderPayment(rs.getString("orderName"), rs.getDouble("orderPrice"), rs.getInt("saleAmount"));
+                i++;
+                hm.put(String.valueOf(i), orderPayment);
+                //orderPayment.setOrderId(Integer.parseInt(rs.getString("Id")));
+            }
+        } catch (Exception e) {
+        }
+        return hm;
+    }
+
+    public static HashMap<String, OrderPayment> selectDailyTransaction() {
+        HashMap<String, OrderPayment> hm = new HashMap<String, OrderPayment>();
+        try {
+            getConnection();
+
+            String selectAcc = "SELECT count(orderTime) as soldAmount, orderTime from orders group by orderTime";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            int i = 0;
+            while (rs.next()) {
+                OrderPayment orderPayment = new OrderPayment(rs.getInt("soldAmount"), rs.getDate("orderTime"));
+                i++;
+                hm.put(String.valueOf(i), orderPayment);
+                //orderPayment.setId(rs.getString("Id"));
+            }
+        } catch (Exception e) {
+        }
+        return hm;
+    }
+
+    public static ArrayList<OrderPayment> selectDailyTransactionForChart() {
+        ArrayList<OrderPayment> orderPaymentArrayList = new ArrayList<OrderPayment>();
+        try {
+            getConnection();
+
+            String selectAcc = "SELECT count(orderTime) as soldAmount, orderTime from orders group by orderTime";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                OrderPayment orderPayment = new OrderPayment(rs.getInt("soldAmount"), rs.getDate("orderTime"));
+                orderPaymentArrayList.add(orderPayment);
+            }
+        } catch (Exception e) {
+        }
+        return orderPaymentArrayList;
+    }
+
+
 
 }

@@ -54,14 +54,38 @@ public class Utilities extends HttpServlet{
 			if (session.getAttribute("username")!=null){
 				String username = session.getAttribute("username").toString();
 				username = Character.toUpperCase(username.charAt(0)) + username.substring(1);
-				result = result + "<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>"
-								+ "<li><a><span class='glyphicon'>Hello,"+username+"</span></a></li>"
-								+ "<li><a href='Account'><span class='glyphicon'>Account</span></a></li>"
-								+ "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
+				String userType = session.getAttribute("userType").toString();
+//				result = result + "<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>"
+//								+ "<li><a><span class='glyphicon'>Hello,"+username+"</span></a></li>"
+//								+ "<li><a href='Account'><span class='glyphicon'>Account</span></a></li>"
+//								+ "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
+				switch(userType) {
+					case "customer":
+						result = result + "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
+										+ "<li><a href='Account'><span class='glyphicon'>Account</span></a></li>"
+
+										+ "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
+						break;
+					case "retailer":
+						result = result + "<li><a href='StoreManagerHome'><span class='glyphicon'>ViewProduct</span></a></li>"
+										+ "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
+										+"<li><a href='DataVisualization'><span class='glyphicon'>Trending</span></a></li>"
+										+"<li><a href='DataAnalytics'><span class='glyphicon'>DataAnalytics</span></a></li>"
+										+"<li><a href='Inventory'><span class='glyphicon'>Inventory</span></a></li>"
+										+"<li><a href='SalesReport'><span class='glyphicon'>SalesReport</span></a></li>"
+										+ "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
+						break;
+					case "manager":
+						result = result + "<li><a href='SalesmanHome'><span class='glyphicon'>ViewOrder</span></a></li>"
+										+ "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
+										+ "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
+						break;
+
+				}
 			}
 			else
-				result = result +"<li><a href='ViewOrder'><span class='glyphicon'>View Order</span></a></li>"+ "<li><a href='Login'><span class='glyphicon'>Login</span></a></li>";
-			result = result +"<li><a href='Cart'><span class='glyphicon'>Cart("+CartCount()+")</span></a></li></ul></div></div><div id='page'>";
+				result = result + "<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>" + "<li><a href='Login'><span class='glyphicon'>Login</span></a></li>";
+			result = result + "<li><a href='Cart'><span class='glyphicon'>Cart(" + CartCount() + ")</span></a></li></ul></div></div><div id='page'>";
 			pw.print(result);
 		} else
 			pw.print(result);

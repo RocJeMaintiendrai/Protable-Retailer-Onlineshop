@@ -11,6 +11,7 @@ public class Product {
     private String condition;
     private String type;
     private double discount;
+    private int inventory;
     HashMap<String, String> accessories;
 
     public Product(String id, String name, double price, String image, String retailer, String condition, String type, double discount) {
@@ -31,6 +32,18 @@ public class Product {
 
     public Product() {
 
+    }
+
+    public Product(String name, double price, int inventory) {
+        this.name = name;
+        this.price = price;
+        this.inventory = inventory;
+    }
+
+    public Product(String name, double price, double discount) {
+        this.name = name;
+        this.price = price;
+        this.discount = discount;
     }
 
     public String getId() {
@@ -100,6 +113,14 @@ public class Product {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+    public int getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(int inventory) {
+        this.inventory = inventory;
     }
 
 }
