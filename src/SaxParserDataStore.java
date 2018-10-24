@@ -290,5 +290,7 @@ public class SaxParserDataStore extends DefaultHandler {
     public static void addHashmap() {
         String TOMCAT_HOME = System.getProperty("catalina.home");
         new SaxParserDataStore(TOMCAT_HOME + "/webapps/Tutorial_1/ProductCatalog.xml");
+
+        //MySqlDataStoreUtilities.insertProducts();
     }
 }

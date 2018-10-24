@@ -25,6 +25,15 @@ public class Game extends HttpServlet{
 		this.retailer = retailer;
 	}
 
+	public Game(String name, double price, String image, String retailer,String condition,double discount){
+		this.name=name;
+		this.price=price;
+		this.image=image;
+		this.condition=condition;
+		this.discount = discount;
+		this.retailer = retailer;
+	}
+
 	public Game(){
 
 	}

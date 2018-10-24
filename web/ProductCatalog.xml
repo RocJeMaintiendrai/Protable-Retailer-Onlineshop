@@ -9,7 +9,7 @@
             <price>46</price>
             <image>suunto.jpg</image>
             <manufacturer>Fitness</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
             <accessories>
                 <accessory>bag</accessory>
@@ -23,7 +23,7 @@
             <price>46</price>
             <image>miband.jpg</image>
             <manufacturer>Fitness</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
             <accessories>
                 <accessory>mouse</accessory>
@@ -36,7 +36,7 @@
             <price>359</price>
             <image>applewatch.jpg</image>
             <manufacturer>Smart</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -45,7 +45,7 @@
             <price>399</price>
             <image>huawei.jpg</image>
             <manufacturer>Smart</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -54,7 +54,7 @@
             <price>349</price>
             <image>sumsung.jpg</image>
             <manufacturer>Smart</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -63,7 +63,7 @@
             <price>249</price>
             <image>beats.jpg</image>
             <manufacturer>Headphone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -72,7 +72,7 @@
             <price>199</price>
             <image>sony.jpg</image>
             <manufacturer>Headphone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -82,7 +82,7 @@
             <price>599</price>
             <image>oculus.jpg</image>
             <manufacturer>Virtualreality</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -91,7 +91,7 @@
             <price>129</price>
             <image>sanxingvr.jpg</image>
             <manufacturer>Virtualreality</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </console>
 
@@ -101,7 +101,7 @@
             <price>99</price>
             <image>pettracker.jpg</image>
             <manufacturer>Pettracker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
 
         </console>
@@ -115,7 +115,7 @@
             <price>1199</price>
             <image>macbook.jpg</image>
             <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </tablet>
         <tablet id="MacBookPro">
@@ -131,7 +131,7 @@
             <price>799</price>
             <image>macbookair.jpg</image>
             <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </tablet>
 
@@ -140,7 +140,7 @@
             <price>399</price>
             <image>surface3.jpg</image>
             <manufacturer>Microsoft</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </tablet>
         <tablet id="Surface4">
@@ -148,7 +148,7 @@
             <price>599</price>
             <image>surface4.jpg</image>
             <manufacturer>Microsoft</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>15</discount>
         </tablet>
         <tablet id="SurfacePro">
@@ -156,7 +156,7 @@
             <price>799</price>
             <image>surfacepro.jpg</image>
             <manufacturer>Microsoft</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </tablet>
         <tablet id="SurfaceBook">
@@ -164,7 +164,7 @@
             <price>1099</price>
             <image>surfacebook.jpg</image>
             <manufacturer>Microsoft</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </tablet>
 
@@ -173,7 +173,7 @@
             <price>1249</price>
             <image>samsunggalaxy.jpg</image>
             <manufacturer>Samsung</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>15</discount>
         </tablet>
         <tablet id="SamsungOdyssey">
@@ -181,7 +181,7 @@
             <price>1399</price>
             <image>odyssey.jpg</image>
             <manufacturer>Samsung</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>15</discount>
         </tablet>
         <tablet id="SamsungNotebook">
@@ -189,7 +189,7 @@
             <price>1199</price>
             <image>samsungnotebook.jpg</image>
             <manufacturer>Samsung</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </tablet>
 
@@ -202,7 +202,7 @@
             <price>449</price>
             <image>iphone7.jpg</image>
             <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
         <game id="iPhone8">
@@ -210,7 +210,7 @@
             <price>599</price>
             <image>iphone8.jpg</image>
             <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
         <game id="iPhoneXR">
@@ -218,7 +218,7 @@
             <price>749</price>
             <image>iphonexr.jpg</image>
             <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
         <game id="iPhoneXs">
@@ -226,7 +226,7 @@
             <price>999</price>
             <image>iphonexs.jpg</image>
             <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
 
@@ -235,7 +235,7 @@
             <price>50</price>
             <image>huaweip20.jpg</image>
             <manufacturer>Huawei</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
         <game id="HuaweiP20Pro">
@@ -243,7 +243,7 @@
             <price>999</price>
             <image>huaweip20pro.jpg</image>
             <manufacturer>Huawei</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
         <game id="HuaweiNova3">
@@ -251,7 +251,7 @@
             <price>499</price>
             <image>huaweinova3.jpg</image>
             <manufacturer>Huawei</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
 
@@ -260,7 +260,7 @@
             <price>465</price>
             <image>mi8.jpg</image>
             <manufacturer>Xiaomi</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>15</discount>
         </game>
         <game id="XiaomiNote5">
@@ -268,7 +268,7 @@
             <price>279.99</price>
             <image>xiaominote5.jpg</image>
             <manufacturer>Xiaomi</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
         <game id="XiaomiRedmi5">
@@ -276,7 +276,7 @@
             <price>484</price>
             <image>redmi5.jpg</image>
             <manufacturer>Xiaomi</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </game>
     </GamesCatalog>
@@ -288,7 +288,7 @@
             <price>49</price>
             <image>googlemini.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="GoogleHome">
@@ -296,7 +296,7 @@
             <price>84</price>
             <image>googlehome.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="AmazonEcho">
@@ -304,7 +304,7 @@
             <price>99</price>
             <image>amazonecho.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="XiaomiSpeaker">
@@ -312,7 +312,7 @@
             <price>99</price>
             <image>xiaomi.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="AppleHomepod">
@@ -320,7 +320,7 @@
             <price>349</price>
             <image>applehomepod.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="Jbl">
@@ -328,7 +328,7 @@
             <price>299</price>
             <image>jbl.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>15</discount>
         </smartspeaker>
         <smartspeaker id="Samsung">
@@ -336,7 +336,7 @@
             <price>89</price>
             <image>samsung.jpg</image>
             <manufacturer>Smartspeaker</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>15</discount>
         </smartspeaker>
         <smartspeaker id="HuaweiSpeaker">
@@ -344,7 +344,7 @@
             <price>129</price>
             <image>huawei.jpg</image>
             <manufacturer>Voiceassistant</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="Bose">
@@ -352,7 +352,7 @@
             <price>379</price>
             <image>bose.jpg</image>
             <manufacturer>Voiceassistant</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
         <smartspeaker id="Microsoft">
@@ -360,7 +360,7 @@
             <price>238</price>
             <image>microsoft.jpg</image>
             <manufacturer>Voiceassistant</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </smartspeaker>
 
@@ -372,7 +372,7 @@
             <price>12</price>
             <image>cover.jpg</image>
             <manufacturer>Phone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -381,7 +381,7 @@
             <price>11</price>
             <image>shield.jpg</image>
             <manufacturer>Phone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>100</discount>
         </accessory>
 
@@ -390,7 +390,7 @@
             <price>5</price>
             <image>cable.jpg</image>
             <manufacturer>Phone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>40</discount>
         </accessory>
 
@@ -399,7 +399,7 @@
             <price>9</price>
             <image>charger.jpg</image>
             <manufacturer>Phone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -408,7 +408,7 @@
             <price>24</price>
             <image>stick.jpg</image>
             <manufacturer>Phone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -417,7 +417,7 @@
             <price>99</price>
             <image>camera.jpg</image>
             <manufacturer>Phone</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -426,7 +426,7 @@
             <price>39</price>
             <image>bag.jpg</image>
             <manufacturer>Fitness</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -436,7 +436,7 @@
             <price>43</price>
             <image>lapcover.jpg</image>
             <manufacturer>Fitness</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -445,7 +445,7 @@
             <price>39</price>
             <image>mouse.jpg</image>
             <manufacturer>Fitness</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
@@ -454,7 +454,7 @@
             <price>89</price>
             <image>key.jpg</image>
             <manufacturer>Fitness</manufacturer>
-            <condition>New</condition>
+            <condition>1</condition>
             <discount>10</discount>
         </accessory>
 
