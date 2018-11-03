@@ -34,6 +34,7 @@ public class AjaxUtility {
     }
 
     public StringBuffer readData(String searchId) {
+        System.out.println("SearchId: "+searchId);
         HashMap<String, Product> data;
         data = getData();
 
@@ -73,30 +74,107 @@ public class AjaxUtility {
         return hm;
     }
 
-    public static void storeData(HashMap<String, Product> productData) {
+    public static boolean storeData(Map<String, Object > map) {
         try {
 
             getConnection();
 
-            String insertIntoProductQuery = "INSERT INTO product(productId,productName,image,retailer,productCondition,productPrice,productType,discount) "
+            String insertIntoProductQuery = "INSERT INTO Productdetails(id,productName,productImage,productManufacturer,productCondition,productPrice,productType,productDiscount) "
                             + "VALUES (?,?,?,?,?,?,?,?);";
-            for (Map.Entry<String, Product> entry : productData.entrySet()) {
-
-                PreparedStatement pst = conn.prepareStatement(insertIntoProductQuery);
-                //set the parameter for each column and execute the prepared statement
-                pst.setString(1, entry.getValue().getId());
-                pst.setString(2, entry.getValue().getName());
-                pst.setString(3, entry.getValue().getImage());
-                pst.setString(4, entry.getValue().getRetailer());
-                pst.setString(5, entry.getValue().getCondition());
-                pst.setDouble(6, entry.getValue().getPrice());
-                pst.setString(7, entry.getValue().getType());
-                pst.setDouble(8, entry.getValue().getDiscount());
-                pst.execute();
+            String id = String.valueOf(map.get("id"));
+            String name = String.valueOf(map.get("name"));
+            double price = Double.parseDouble(String.valueOf(map.get("price")));
+            String image = String.valueOf(map.get("image"));
+            String retailer = String.valueOf(map.get("manufacturer"));
+            String productCondition = String.valueOf(map.get("condition"));
+            double discount = Double.parseDouble(String.valueOf(map.get("discount")));
+            String catalog = String.valueOf(map.get("productCatalog"));
+            String condition = "";
+            switch(productCondition) {
+                case "New":
+                    condition = "1";
+                    break;
+                case "Used":
+                    condition = "0";
+                    break;
+                case "Refurbished":
+                    condition = "2";
+                    break;
             }
+            PreparedStatement pst = conn.prepareStatement(insertIntoProductQuery);
+            pst.setString(1, id);
+            pst.setString(2, name);
+            pst.setString(3, image);
+            pst.setString(4, retailer);
+            pst.setString(5, condition);
+            pst.setDouble(6, price);
+            pst.setString(7, catalog);
+            pst.setDouble(8, discount);
+            pst.execute();
+            return true;
         } catch (Exception e) {
-
+            e.printStackTrace();
+            return false;
         }
     }
+
+    public static boolean deleteProduct(String productId) {
+        try {
+            getConnection();
+            String deleteProductsQuery = "Delete from ()roductdetails where id=?";
+            PreparedStatement pst = conn.prepareStatement(deleteProductsQuery);
+            pst.setString(1, productId);
+            pst.executeUpdate();
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static boolean updateProducts(String productType, String productId, String productName, double productPrice, String productImage, String productManufacturer, String productCondition, double productDiscount) {
+        try {
+
+            String condition = "";
+
+            switch (productCondition) {
+                case "New":
+                    condition = "1";
+                    break;
+                case "Used":
+                    condition = "0";
+                    break;
+                case "Refurbished":
+                    condition = "2";
+                    break;
+
+            }
+
+            getConnection();
+            String updateProductQuery = "UPDATE Productdetails SET productName=?,productPrice=?,productImage=?,productManufacturer=?,productCondition=?,productDiscount=?, productType=? where Id =?;";
+
+
+            PreparedStatement pst = conn.prepareStatement(updateProductQuery);
+
+            pst.setString(1, productName);
+            pst.setDouble(2, productPrice);
+            pst.setString(3, productImage);
+            pst.setString(4, productManufacturer);
+            pst.setString(5, condition);
+            pst.setDouble(6, productDiscount);
+            pst.setString(7, productType);
+            pst.setString(8, productId);
+            pst.executeUpdate();
+
+            return true;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+
 
 }

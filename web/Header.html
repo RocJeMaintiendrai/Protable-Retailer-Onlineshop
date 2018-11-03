@@ -3,16 +3,16 @@
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>GameSpeed</title>
+	<title>SmartPortables</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 	<!-- Links for Jquery and bootstrap css -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<script>
+	<script type="text/javascript">
         <!-- jqurey script -->
         $(document).ready(function(){
             $('#myCarousel').carousel({
@@ -29,11 +29,12 @@
 	</script>
 	<script type="text/javascript">
         function removeCart(itemName) {
-            document.getElementById('CartForm').actino = "RemoveCart?action=removeCart&amp;itemName=" + itemName;
+            document.getElementById('CartForm').action = "RemoveCart?action=removeCart&amp;itemName=" + itemName;
             document.getElementById('CartForm').submit();
         }
 	</script>
-	<style>
+	<script type="text/javascript" src="javascript.js"></script>
+	<style >
 		* {
 			box-sizing : unset;
 		}
@@ -42,11 +43,8 @@
 		}
 	</style>
 
-
-
 </head>
-<body style='margin: 0px !important; padding: 0 !important;	background: #000000 !important;	font-family: Georgia, "Times New Roman", Times, serif;	font-size: 12px !important;	'>
-<script type="text/javascript" src="autocomplete.js"></script>
+<body onload="init()" style='margin: 0px !important; padding: 0 !important;	background: #000000 !important;	font-family: Georgia, "Times New Roman", Times, serif;	font-size: 12px !important;	'>
 <!-- Start #logo top content of the webpage-->
 <div id="logo">
 	<table style="float: left">
@@ -54,13 +52,13 @@
 			<td style="valign: top;"><img src="images/site/smart.jpg" alt=""
 										  style="height: 80px" /></td>
 			<td><h1>
-				<a href="#">SmartPortales</a>
+				<a href="#">SmartPortables</a>
 			</h1></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><p>
-				<em>World's Largest Smart Electronics  Center</em>
+				<em>World's Largest Smart Electronics Center</em>
 			</p></td>
 		</tr>
 	</table>
@@ -68,9 +66,9 @@
 			style="float: right; width: 30%; margin-top: 35px; border: 1px solid white; padding: 5px; padding-right: 15px">
 		<em style="color: white;">Search Product:</em>
 		<div name="autofillform">
-			<input type="text" name="complete-field" value="" class="input"
-				   id="complete-field" onkeyup="doCompletion()" autocomplete="off"
-				   placeholder="search here.." style="padding: 5px; font-size: 16px;" />
+			<input type="text" name="searchId" value="" class="input" id="searchId"
+				    onkeyup="doCompletion()"
+				   placeholder="Search here..." style="padding: 5px; font-size: 16px;" />
 			<div id="auto-row">
 				<table id="complete-table" class="gridtable"
 					   style="position: absolute; width: 315px;"></table>

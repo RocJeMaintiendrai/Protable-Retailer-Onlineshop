@@ -12,7 +12,7 @@ function init() {
 
 function doCompletion() {
 
-    var url = "autocomplete?action=complete&searchId=" + escape(searchId.value);
+    var url = "Autocomplete?action=complete&searchId=" + searchId.value;
     req = initRequest();
     req.open("GET", url, true);
     req.onreadystatechange = callback;
@@ -63,7 +63,7 @@ function appendProduct(productName,productId) {
 
     linkElement = document.createElement("a");
     linkElement.className = "popupItem";
-    linkElement.setAttribute("href", "autocomplete?action=lookup&searchId=" + productId);
+    linkElement.setAttribute("href", "Autocomplete?action=lookup&searchId=" + productId);
     linkElement.appendChild(document.createTextNode(productName));
     cell.appendChild(linkElement);
 }

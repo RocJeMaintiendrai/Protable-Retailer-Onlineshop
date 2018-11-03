@@ -6,7 +6,7 @@ body {
 	padding: 0;
 	background:#FFFFFF;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 12px;	
+	font-size: 12px;
 }
 
 /* Decoration of CSS Headers tags for Full Website  */
@@ -55,7 +55,7 @@ hr {
 	padding: 30px 20px 0px 20px;
 }
 
-/* Game Speed LOGO Decoration with Heading and paragraph Tags*/ 
+/* Game Speed LOGO Decoration with Heading and paragraph Tags*/
 
 #logo h1,#logo p {
 	margin: 0px;
@@ -207,7 +207,7 @@ hr {
 .post .entry {
 	padding: 10px 20px;
 	overflow-x: auto;
-	
+
 }
 
 .post .links {
@@ -273,7 +273,7 @@ hr {
 	padding: 10px 0px 10px 0px;
 	border-radius: 5px;
 	background: #D7DF01;
-	
+
 }
 
 /* Left Navigation Bar - Decoration for Consoles , Games , Tablets */
@@ -290,10 +290,10 @@ hr {
 	padding: 10px 0px;
 	border: none;
 	background: url(images/site/img06.jpg) repeat-x left top;
-	
+
 }
 
-/* Left Navigation Bar - Decoration for List Bullets */ 
+/* Left Navigation Bar - Decoration for List Bullets */
 
 #sidebar li li a {
 	padding: 0px 0px 0px 30px;
@@ -308,7 +308,7 @@ hr {
 	margin-right: 20px;
 }
 
-/* Left Navigation Bar - Decoration for Hyperlink hover Tags ( Colour Changes) */ 
+/* Left Navigation Bar - Decoration for Hyperlink hover Tags ( Colour Changes) */
 
 #sidebar li li a:hover {
 	color: #666666;
@@ -342,7 +342,7 @@ hr {
 	text-align: center;
 }
 
-/* Left Navigation Bar - Decoration for Hyperlink Tags */ 
+/* Left Navigation Bar - Decoration for Hyperlink Tags */
 
 #sidebar a {
 	text-align: left;
@@ -381,8 +381,8 @@ hr {
 	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
-	
-	
+
+
 }
 
 /*  Unordered List of Items in the Store Display */
@@ -392,7 +392,7 @@ hr {
 	padding: 0;
 	list-style: none;
 	border: none;
-	
+
 }
 
 /*  Unordered List of Items and List Tags in the Store Display */
@@ -410,7 +410,7 @@ hr {
 	height: 160px;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 }
 
 /* Decoration for Display of Products in the Store  */
@@ -419,14 +419,14 @@ hr {
 	display: block;
 	text-align: center;
 	margin-bottom: 5px;
-	
+
 }
 
 /* Border Decoration for Display of Products in the Store  */
 
 #shop_item #item {
 	border: 1px solid #000;
-	
+
 }
 
 /* Heading Tag for Display of Products in the Store  */
@@ -435,7 +435,7 @@ hr {
 	text-align: center;
 	font-size: 15px;
 	margin-bottom: 0;
-	
+
 }
 
 /* Button Decoration for Display of Products in the Store  */
@@ -444,7 +444,7 @@ hr {
 	width: 100%;
 	margin-bottom: 6px;
 	overflow-x: scroll;
-	
+
 }
 
 /* Best Seller Products display on Home Screen*/
@@ -544,25 +544,24 @@ table.gridtable td {
 /* style for prev annd next button of carousel */
 
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
 }
 
 
 
 .container {
-  width:auto !important;
+	width:auto !important;
 	height:auto !important;
 	position:relative;
 	overflow:hidden;
 }
-
