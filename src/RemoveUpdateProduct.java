@@ -29,7 +29,7 @@ public class RemoveUpdateProduct extends HttpServlet {
 
         if (request.getParameter("Product") != null && request.getParameter("Product").equals("Remove")) {
             //Remove Product
-            if (utility.removeProduct(productId, catalog)) {
+            if (utility.removeProduct(productId, catalog) && AjaxUtility.deleteProduct(productId)) {
                 response.sendRedirect("StoreManagerHome");
             }
         } else if (request.getParameter("Product") != null && request.getParameter("Product").equals("Update")) {
@@ -37,12 +37,14 @@ public class RemoveUpdateProduct extends HttpServlet {
 
             utility.printHtml("Header.html");
             utility.printHtml("LeftNavigationBar.html");
+
             pw.print("<div id='content'>");
             pw.print("<div class='post'>");
             pw.print("<h3 class='title'>");
             pw.print("Update product");
             pw.print("</h3>");
             pw.print("<div class='entry'>");
+
             //显示更新product的表格
             pw.print("<form action='UpdateProduct' method='post'");
             pw.print("<table style='width:100%'><tr><td>");

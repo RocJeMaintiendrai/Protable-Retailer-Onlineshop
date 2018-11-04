@@ -121,7 +121,7 @@ public class AjaxUtility {
     public static boolean deleteProduct(String productId) {
         try {
             getConnection();
-            String deleteProductsQuery = "Delete from ()roductdetails where id=?";
+            String deleteProductsQuery = "Delete from Productdetails where id=?";
             PreparedStatement pst = conn.prepareStatement(deleteProductsQuery);
             pst.setString(1, productId);
             pst.executeUpdate();

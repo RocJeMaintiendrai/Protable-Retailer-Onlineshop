@@ -44,13 +44,12 @@ public class StoreManagerHome extends HttpServlet{
             for (FileItem fileItem : parseRequest) {
                 boolean formField = fileItem.isFormField();
                 if (formField) {
-
                     String fieldName = fileItem.getFieldName();
                     String fieldValue = fileItem.getString();
                     map.put(fieldName, fieldValue);
                 } else {
 
-
+                    //upload photo
                     catalog = String.valueOf(map.get("productCatalog"));
                     String realPath = utility.getRealPath(catalog);
 
@@ -67,8 +66,8 @@ public class StoreManagerHome extends HttpServlet{
                 }
             }
 
-            if (utility.storeNewProduct(map)) {
-
+            if (utility.storeNewProduct(map) && AjaxUtility.storeData(map)) {
+                // add successful
                 error_msg = "Completed!";
                 displayStoreManagerHome(request, response, pw, "newProduct");
             } else {

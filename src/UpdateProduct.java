@@ -26,7 +26,8 @@ public class UpdateProduct extends HttpServlet{
         String catalog = request.getParameter("catalog");
         String image = request.getParameter("image");
 
-        if (utility.updateProduct(productId, name, price, manufacturer, condition, discount, image, catalog)) {
+        if (utility.updateProduct(productId, name, price, manufacturer, condition, discount, image, catalog) &&
+                        AjaxUtility.updateProducts(catalog,productId,name,Double.parseDouble(price),image, manufacturer,condition,Double.parseDouble(discount))) {
             pw.print("alert(\"Update successfully!\")");
             response.sendRedirect("StoreManagerHome");
         }
