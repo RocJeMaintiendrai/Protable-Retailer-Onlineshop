@@ -91,7 +91,7 @@ public class StoreManagerHome extends HttpServlet{
         pw.print("<div id='content'>");
         pw.print("<div class='post'>");
         pw.print("<h3 class='title'>");
-        pw.print("Create New product");
+        pw.print("Add Product");
         pw.print("</h3>");
         pw.print("<div class='entry'>");
 
@@ -101,13 +101,13 @@ public class StoreManagerHome extends HttpServlet{
         pw.print("<form action='StoreManagerHome' method='post' enctype='multipart/form-data'>");
         pw.print("<table style='width:100%'><tr><td>");
 
-        pw.print("<h4>Product ID</h4></td><td><input type='text' name='id' value='' class='input' required></input>");
+        pw.print("<h4>ID</h4></td><td><input type='text' name='id' value='' class='input' required></input>");
         pw.print("</td></tr><tr><td>");
 
-        pw.print("<h4>Product Name</h4></td><td><input type='text' name='name' value='' class='input' required></input>");
+        pw.print("<h4>Name</h4></td><td><input type='text' name='name' value='' class='input' required></input>");
         pw.print("</td></tr><tr><td>");
 
-        pw.print("<h4>Product Catalog</h4><td><select name='productCatalog' class='input'>" +
+        pw.print("<h4>Type</h4><td><select name='productCatalog' class='input'>" +
                                  "<option value='Console' selected>Wearable Tech</option>" +
                                  "<option value='Game'>Phone</option>" +
                                  "<option value='Tablet'>Laptop</option>" +
@@ -141,7 +141,7 @@ public class StoreManagerHome extends HttpServlet{
 
         pw.print("<div class='post'>");
         pw.print("<h2 class='title meta'>");
-        pw.print("<a style='font-size: 24px;'>View Products</a></h2>");
+        pw.print("<a style='font-size: 24px;'>List Products</a></h2>");
         pw.print("<div class='entry'>");
         pw.print("<table class='gridtable'>");
 
@@ -155,7 +155,7 @@ public class StoreManagerHome extends HttpServlet{
         pw.print("<td>Manufacturer</td>");
         pw.print("<td>Condition</td>");
         pw.print("<td>Discount</td>");
-        pw.print("<td>Catalog</td>");
+        pw.print("<td>Type</td>");
         pw.print("</tr>");
 
         //Console
