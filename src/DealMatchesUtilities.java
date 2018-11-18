@@ -25,7 +25,7 @@ public class DealMatchesUtilities extends HttpServlet {
             pw.print("<a href='#'>Welcome to SmartPortables </a></h2>");
 
             pw.print("<div class='entry'>");
-            pw.print("<img src='images/home.jpg' style='width: 600px; display: block; margin-left: auto; margin-right: auto' />");
+            pw.print("<img src='images/smart/consoles.jpg' style='width: 600px; display: block; margin-left: auto; margin-right: auto' />");
             pw.print("<br> <br>");
             pw.print("<h1>We beat our competitors in all aspects. Price-Match Guaranteed</h2>");
 

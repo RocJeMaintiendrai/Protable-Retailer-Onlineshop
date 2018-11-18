@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +22,9 @@ public class Home extends HttpServlet {
 		Utilities utility = new Utilities(request,pw);
 		utility.printHtml("Header.html");
 		utility.printHtml("LeftNavigationBar.html");
-		utility.printHtml("Content.html");
+		//utility.printHtml("Content.html");
+		RequestDispatcher rd=request.getRequestDispatcher("DealMatchesUtilities");
+		rd.include(request,response);
 		utility.printHtml("Footer.html");
 
 	}
